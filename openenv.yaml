@@ -1,0 +1,29 @@
+name: EmailTriage-v1
+version: 1.0.0
+
+description: |
+  RL environment for email classification and response generation.
+
+entry_point: server.app:app
+
+protocol: http
+
+actions:
+  type: object
+  properties:
+    urgency:
+      type: string
+    key_action:
+      type: string
+    sender_intent:
+      type: string
+    response:
+      type: string
+    confidence:
+      type: number
+
+observations:
+  type: object
+
+rewards:
+  type: object
